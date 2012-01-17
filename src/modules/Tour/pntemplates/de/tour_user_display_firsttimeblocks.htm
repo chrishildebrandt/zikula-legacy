@@ -1,0 +1,32 @@
+<!--[include file="tour_user_menu.htm"]-->
+
+<h2>Blöcke</h2>
+
+<p>
+  Um einen Link, bspw. zu einem neu installiertem Modul, in den Navigationsmenüs hinzufügen zu können, wird vorab kurz auf das Konzept der Blöcke eingegangen.  Die Blöcke kann man mit den DesktopWidgets (Taschenrechner, CPU-Temperatur, etc.) der gängigen Betriebssystem vergleichen. Blöcke erweitern die vorhandenen Module um zusätzliche Funktionen, die ergänzend zum Hauptinhalt angezeigt werden. Beim <em>Hauptmenü</em> und <em>Anmeldeformular</em> an den Seitenrändern handelt es sich beispielsweise auch um Blöcke.
+</p>
+
+<p>
+  Blöcke können für Funktionen genutzt werden, wie <em>die letzten 5 Newsbeiträge</em>, <em>neueste Downloads</em>, <em>letzte Foreneinträge</em> und <em>Mitglieder online</em>. Jedes neu installierte Modul kann unterschiedlich viele neue Blöcke dem System zur Verfügung stellen.
+</p>
+
+<p>
+  Über die <a href="<!--[pnmodurl modname="Blocks" type="admin"]-->">Blockadministration</a> können die Menüblöcke bearbeitet werden. Nach dem Klick auf das Bearbeiten-Symbol an der rechten Seite der Zeile, erscheint ein Formular zum Bearbeiten der Menüliste. Dort können Links hinzugefügt, bearbeitet oder gelöscht werden. Jeder Block hat ein eigenes Bearbeitungsformular, indem die modulspezifischen Einstellungen individuell angepasst werden können.
+</p>
+
+<h2>Blockpositionen</h2>
+
+<p>
+  Die Blöcke können über die <a href="<!--[pnmodurl modname="Blocks" type="admin" func="view"]-->#blockpositions">Blockpositionen</a> in beliebiger Reihenfolge sortiert bzw. positioniert werden. Jede Distribution beinhaltet grundsätzlich die Standard-Blockpositionen "Links", "Mitte" und "Rechts".  Weitere Positionen, wie z.B. für eine Kopfzeile kann folgendermaßen ergänzt werden:
+</p>
+
+<ol>
+  <li>Anlegen einer Blockposition namens 'topblock'</li>
+  <li>Themetemplates im Quellcode um diese neue Blockposition erweitern</li>
+  <li>Anlegen eines neuen Blocks mit dem gewünschten Inhalt</li>
+  <li>Neuen Block die Blockposition 'topblock' zuweisen</li>
+</ol>
+
+<p><em>Weitere Informationen online unter: <a href="http://wiki.zikula.de/System/Bl%C3%B6cke">Zikula Wiki - Blöcke)</a></em></p>
+
+<p>Es können beliebig viele Blockpositionen angelegt und über die Themetemplates nach Belieben verteilt werden.</p>

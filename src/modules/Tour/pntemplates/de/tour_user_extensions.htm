@@ -1,0 +1,22 @@
+<!--[include file="tour_user_menu.htm"]-->
+
+<h1>Erweiterungen</h1>
+<p>Einige der im System installierten Erweiterungen können eigene Einstiegshilfen anbieten. Die vorhandenen werden nachstehend aufgeführt. Erweiterungen, die hier fehlen, können jedoch andere Formen der Dokumentation haben. Dazu bitte die Internetseite des Autors und/oder das jeweilige pndocs-Verzeichnis prüfen.</p>
+
+<h2>Module</h2>
+<ul>
+  <!--[foreach from=$modpages item="mod"]-->
+    <li><a href="<!--[pnmodurl modname="tour" func="exttour" ext=$mod exttype="module" page=1]-->"><!--[$mod]--></a></li>
+    <!--[foreachelse]-->
+    <li>Keine Einstiegshilfen für Module vorhanden!</li>
+  <!--[/foreach]-->
+</ul>
+
+<h2>Themes</h2>
+<ul>
+  <!--[foreach from=$themepages item="theme"]-->
+    <li><a href="<!--[pnmodurl modname="tour" func="exttour" ext=$theme exttype="theme" page=1]-->"><!--[$theme]--></a></li>
+    <!--[foreachelse]-->
+    <li>Keine Einstiegshilfen für Themes vorhanden!</li>
+  <!--[/foreach]-->
+</ul>

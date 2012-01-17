@@ -1,0 +1,42 @@
+<!--[include file="tour_user_menu.htm"]-->
+
+<h1>Willkommen zu Zikula!</h1>
+<p>
+  Vielen Dank für die Installation des <em>Zikula Web-Toolkit</em>. Zikula ist eine frei verfügbare Open Source Software, die unter Berücksichtigung der GPL-Lizenzbestimmungen genutzt werden kann.
+</p>
+
+<p>
+  Diese Seiten wurden entworfen, um sich mit dem System vertraut zu machen. Die folgenden Links sollen beim Einstieg helfen. Bitte einfach ein Thema, das interessiert sein könnte.
+</p>
+
+<h3>Weitere Informationsquellen</h3>
+<dl>
+  <dt><strong>Deutschsprachiger Support und Dokumentation</strong></dt>
+  <dd><a href="http://support.zikula.de" title="support.zikula.de">Deutsche Community</a></dd>
+  <dd><a href="http://wiki.zikula.de" title="Deutsches Zikula Wiki">Deutsches Wiki Handbuch</a></dd>
+  <dt><strong>International</strong></dt>
+  <dd><a href="http://community.zikula.org" title="Zikula Community">Zikula Community</a></dd>
+  <dd><a href="http://community.zikula.org/Wiki.htm" title="Zikula Documentation Wiki">Zikula Dokumentationswiki</a></dd>
+  <dd><a href="http://community.zikula.org/module-Extensions.htm" title="Extensions Database">Erweiterungsdatenbank (extDB)</a></dd>
+  <dt><strong>Themes</strong></dt>
+  <dd><a href="http://community.zikula.org/module-Extensions.htm" title="Extensions Database">Erweiterungsdatenbank (extDB)</a></dd>
+  <dd><a href="http://www.blanktheme.org" title="Blanktheme">Blanktheme.org</a></dd>
+  <dd><a href="http://postnuke-themes.de" title="PostNuke-Themes">PostNuke-Themes.de</a></dd>
+</dl>
+
+<h2>Direkteinstieg</h2>
+<!--[pnsecauthaction comp="::" inst="::" level=ACCESS_ADMIN assign="perm"]-->
+<!--[if $perm]-->
+<p>
+  Der Internetauftritt kann über den Link <a href="<!--[pnmodurl modname=Admin type=admin func=adminpanel]-->">Administration</a> verwaltet werden (in der Regel befindet sich dieser in der oberen linken Ecke). Nach einer Abmeldung ist dieser Link wieder verschwunden. Anschließend kann man sich über den Login-Block (in der Regel auf der rechten Seite) oder über die <a href="<!--[pnmodurl modname=Users func=loginscreen]-->">Login-Seite</a> erneut anmelden.
+</p>
+<!--[else]-->
+<p>
+  Derzeit liegt keine Anmeldung vor. Mit den, während der Installation festgelegten, Benutzerdaten kann über den Login-Block (normalerweise auf der rechten Seite) oder alternativ über die <a href="<!--[pnmodurl modname=Users func=loginscreen]-->">Login-Seite</a> eine Anmeldung durchgeführt werden. Anschließend erscheint im Hauptmenü (links oben) der Link zur Administration.
+</p>
+<!--[/if]-->
+<p><strong>Später, um dieses Tour-Modul zu entfernen und mit der Erstellung der Website zu beginnen...</strong></p>
+
+<p>
+  ...begibt man sich einfach in die Administration, klickt auf die Registerkarte "System" und öffnet das Modul "Einstellungen". Um ein anderes Modul auf der Startseite anzuzeigen, ändern man die Auswahl im Abschnitt "Startseite" auf ein beliebiges Modul. Dieses Modul kann dauerhaft über die Moduladministration entfernt werden. Bis dahin steht das Modul unter folgenden Link zur Verfügung: <a href="<!--[pnmodurl modname=Tour]-->"><!--[pnmodurl modname=Tour]--></a>
+</p>

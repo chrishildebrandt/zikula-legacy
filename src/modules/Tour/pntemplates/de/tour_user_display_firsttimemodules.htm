@@ -1,0 +1,39 @@
+<!--[include file="tour_user_menu.htm"]-->
+
+<h1>Module</h1>
+
+<p>
+  Module sind der Kern einer Zikula-Seite. Fast alles, was Sie hier sehen, wird über ein Modul erstellt oder verwaltet. Vergleicht man den Internetauftritt mit dem Desktop eines Computers, so ist Zikula das Betriebssystem. Module wären dann einzelne Anwendungen, wie zum Beispiel eine Textverarbeitung oder ein Internetbrowser. Während Blöcke <em>nur</em> zusätzliche Funktionen zur Verfügung stellen, wie ein Instant-Messenger oder eine Weckerfunktion.
+</p>
+
+<p>
+  Es gibt im Wesentlichen zwei Modularten: System-Module und Value-Addons. System-Module sind für den reibungslosen Betrieb von Zikula von wesentlicher Bedeutung und liegen im System-Verzeichnis. Alle anderen Module befinden sich im Modulverzeichnis und bieten, abhängig von den spezifischen Bedürfnissen, zusätzliche Features an.
+</p>
+
+<p>
+  Aus der Anwendersicht gesehen, werden Module für das Präsentieren und Organisieren der Inhalte eingesetzt. Zum Beispiel: Das News-Modul beinhaltet Newsbeiträge, die vom Administrator hinzugefügt und organisiert wurden. Dem Anwender werden die Beiträge in verschiedenen Arten angezeigt, wie z.B. in sequentieller Reihenfolger, in Archivform oder sogar als RSS-Newsfeed. Und all dies wird über das News-Modul umgesetzt
+</p>
+
+<p>
+  Es existieren Module für verschiedene Zwecke. Von der einfachen Verwaltung von HTML-Seiten, Forum, Kontaktformular, Downloads bis hin zu einer Bildergalerie - es ist alles da. Man muss nur eine Auswahl treffen und das Modul installieren. Je nach Einsatzzweck des Internetauftritts.
+</p>
+
+<h2>Installieren und Entfernen von Modulen</h2>
+
+<p>
+  Zikula verfügt über eine einfache <a href="<!--[pnmodurl modname="modules" type="admin" func="main"]-->">Moduladministration</a>, die sich in der Administration im Abschnitt "System" befindet. Hier sieht man eine Tabelle mit den installierten Modulen, deren aktueller Status und Buttons zur Steuerung des Modulstatus. Wird ein Modul deaktiviert werden die Daten weiterhin gespeichert, aber das Modul ist anschließend nicht mehr nutzbar. Über "Entfernen" wird das Modul mitsamt der dazugehörigen Datenbankinhalte aus dem System entfernt und eine Löschung über das Dateisystem vorbereitet.
+</p>
+
+<p>
+  Das Entfernen eines Moduls ist recht einfach. Dazu begibt man sich in die Moduladministration und klickt auf das Entfernen-Symbol. Nachdem dieser Schritt erledigt ist, kann das dazugehörige Modulverzeichnis manuell per FTP gelöscht werden. Vor dem Löschen im Dateisytem sollte ein Modul vorher grundsätzlich über die Moduladministration entfernt werden, damit langfristig keine Inkonsistenzen auftreten. Aus Sicherheitsgründen kann/soll Zikula die Dateien nicht eigenhändig löschen.
+</p>
+
+<p>
+  Generell kann ein Modul hinzugefügt werden, in dem die entpackten Dateien per FTP ins 'modules'-Verzeichnis übertragen werden. Danach klickt man in der <a href="<!--[pnmodurl modname="modules" type="admin" func="main"]-->">Moduladministration</a> auf den Link 'Liste mit Dateisystem abgleichen'. Somit erkennt Zikula das neu hochgeladene Modul und es wird in der Tabelle aufgeführt. Ein anschließender Klick auf das Initialisieren-Symbol bereitet die Installation vor, die im nächsten Schritt durchgeführt wird.
+</p>
+
+<p><em>Weitere Informationen online unter: <a href="http://wiki.zikula.de/Module">Zikula Wiki - Module)</a></em></p>
+
+<p>
+  <strong><a href="<!--[pnmodurl modname="Tour" func="display" page="firsttimeblocks"]-->">Das ist toll. Aber wie füge ich einen Link in die Menüs, damit die Nutzer auf das Modul zugreifen können?</a></strong>
+</p>

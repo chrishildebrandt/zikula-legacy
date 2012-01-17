@@ -1,0 +1,128 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: legal 1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-11-04 04:57-0500\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Carsten Volmer <carsten@zikula.org>\n"
+"Language-Team: Carsten Volmer <carsten@zikula.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Translate Toolkit 1.5.1\n"
+"X-Poedit-Language: Germay\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Country: Germany\n"
+
+#: pnadmin.php:64
+msgid "All users"
+msgstr "Alle Benutzer"
+
+#: pnadmin.php:67
+msgid "No groups"
+msgstr "Keine Gruppen"
+
+#: pnadmin.php:123
+msgid "Done! Saved module configuration."
+msgstr "Erledigt! Die Modulkonfiguration wurde aktualisiert."
+
+#: pnuser.php:48
+msgid "'Terms of use' not activated."
+msgstr "Die Nutzungsbedingungen sind nicht aktiviert."
+
+#: pnuser.php:89
+msgid "'Privacy policy' not activated."
+msgstr "Die Hinweise zum Datenschutz sind nicht aktiviert."
+
+#: pnuser.php:128
+msgid "'Accessibility statement' not activated."
+msgstr "Die Hinweise zur Barrierefreiheit sind nicht aktiviert."
+
+#: pnversion.php:16 pntemplates/legal_admin_menu.htm:4
+msgid "Legal info manager"
+msgstr "Rechtliches"
+
+#: pnversion.php:17
+msgid ""
+"Provides an interface for managing the site's 'Terms of use', 'Privacy "
+"statement' and 'Accessibility statement'."
+msgstr "Nutzungsbedingungen, Hinweise zum Datenschutz und zur Barrierefreiheit."
+
+#. ! module name that appears in URL
+#: pnversion.php:19
+msgid "legalmod"
+msgstr "rechtliches"
+
+#: pntemplates/plugins/function.legaluserlinks.php:44
+#: pntemplates/legal_admin_modifyconfig.htm:13
+msgid "Terms of use"
+msgstr "Nutzungsbedingungen"
+
+#: pntemplates/plugins/function.legaluserlinks.php:47
+#: pntemplates/legal_admin_modifyconfig.htm:17
+msgid "Privacy policy"
+msgstr "Hinweise zum Datenschutz"
+
+#: pntemplates/plugins/function.legaluserlinks.php:50
+#: pntemplates/legal_admin_modifyconfig.htm:21
+msgid "Accessibility statement"
+msgstr "Erklärung zur Barrierefreiheit"
+
+#: pntemplates/legal_user_menu.htm:3
+msgid "Legal information"
+msgstr "Rechtliche Informationen"
+
+#: pntemplates/legal_admin_modifyconfig.htm:4
+#: pntemplates/legal_admin_modifyconfig.htm:5
+msgid "Settings"
+msgstr "Konfiguration"
+
+#: pntemplates/legal_admin_modifyconfig.htm:6
+msgid ""
+"<strong>Important Usage Note</strong>: The provided legal statements are "
+"samples only. They need to be adapted to specific needs and locales. You "
+"will find the content of the statements in files in the \"modules/legal/"
+"pntemplates/en\" directory. These templates can be <a href=\"http://"
+"community.zikula.org/Wiki-TemplateOverridng.htm\">overridden</a> by theme "
+"templates, or by global templates you would create in the \"config/templates/"
+"legal/\" directory (in the appropriate sub-directory for the language you "
+"are writing for)."
+msgstr ""
+"<strong>Wichtige Nutzungshinweise</strong>: Die bereitgestellten "
+"Nutzungsbedingungen sind nur Beispiele. Sie erfordern eine Anpassung an "
+"besondere Anforderungen und den Einsatzort. Der Inhalt der Bedingungen "
+"findet sich in Dateien im modules/legal/pntemplates/de/ Verzeichnis. Diese "
+"Templates können durch <a href=\"http://community.zikula.org/Wiki-"
+"TemplateOverridng.htm\">Templates im Theme-Ordner</a> überlagert werden."
+
+#: pntemplates/legal_admin_modifyconfig.htm:11
+msgid "General settings"
+msgstr "Allgemeine Einstellungen"
+
+#: pntemplates/legal_admin_modifyconfig.htm:25
+msgid "Reset user group's acceptance of 'Terms of use'"
+msgstr "Zustimmung zu den Nutzungsbedingungen zurücksetzen"
+
+#: pntemplates/legal_admin_modifyconfig.htm:31
+msgid ""
+"Notice: This setting resets the acceptance of the 'Terms of use' for all "
+"users in this group. Next time they want to log-in, they will have to "
+"acknowledge their acceptance of them again, and will not be able to log-in "
+"if they do not. This action does not affect the main administrator account. "
+"You can perform the same operation for individual users by visiting the "
+"Users manager in the site admin panel."
+msgstr ""
+"Hinweis: Bei Aktualisierung der Nutzungsbedingungen kann die Zustimmung "
+"zurückgesetzt werden. Abgesehen von den Administratoren können sich die "
+"Mitglieder der entsprechenden Gruppen erst nach erneuter Zustimmung wieder "
+"anmelden. Für einzelne Benutzer kann das auch in der Benutzeradministration "
+"veranlasst werden."
+
+#: pntemplates/legal_admin_modifyconfig.htm:36
+msgid "Save"
+msgstr "Speichern"
+
+#: pntemplates/legal_admin_modifyconfig.htm:37
+msgid "Cancel"
+msgstr "Abbrechen"

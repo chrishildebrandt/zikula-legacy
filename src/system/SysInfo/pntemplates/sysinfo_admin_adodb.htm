@@ -1,0 +1,43 @@
+<!--[*  $Id: sysinfo_admin_adodb.htm 27151 2009-10-25 03:17:26Z drak $  *]-->
+<!--[include file="sysinfo_admin_menu.htm"]-->
+<!--[gt text="ADODB database layer" assign=templatetitle]-->
+<div class="z-admincontainer">
+    <div class="z-adminpageicon"><!--[pnimg modname=core src=info.gif set=icons/large alt=$templatetitle]--></div>
+    <h2><!--[$templatetitle]--></h2>
+    <table class="z-admintable">
+        <tbody>
+            <tr class="<!--[cycle values="z-odd,z-even"]-->">
+                <td><!--[gt text="Version"]--></td>
+                <td><!--[$version|pnvarprepfordisplay]--></td>
+            </tr>
+            <tr class="<!--[cycle values="z-odd,z-even"]-->">
+                <td><!--[gt text="Database type"]--></td>
+                <td><!--[$dbconn->databaseType|pnvarprepfordisplay]--></td>
+            </tr>
+            <tr class="<!--[cycle values="z-odd,z-even"]-->">
+                <td><!--[gt text="Database provider"]--></td>
+                <td><!--[$dbconn->dataProvider|pnvarprepfordisplay]--></td>
+            </tr>
+            <tr class="<!--[cycle values="z-odd,z-even"]-->">
+                <td><!--[gt text="Database server description"]--></td>
+                <td><!--[$dbserverinfo.description|pnvarprepfordisplay]--></td>
+            </tr>
+            <tr class="<!--[cycle values="z-odd,z-even"]-->">
+                <td><!--[gt text="Database version"]--></td>
+                <td><!--[$dbserverinfo.version|pnvarprepfordisplay]--></td>
+            </tr>
+            <tr class="<!--[cycle values="z-odd,z-even"]-->">
+                <td><!--[gt text="Database host"]--></td>
+                <td><!--[$dbconn->host|pnvarprepfordisplay]--></td>
+            </tr>
+            <tr class="<!--[cycle values="z-odd,z-even"]-->">
+                <td><!--[gt text="Database name"]--></td>
+                <td><!--[$dbconn->database|pnvarprepfordisplay]--></td>
+            </tr>
+            <tr class="<!--[cycle values="z-odd,z-even"]-->">
+                <td><!--[gt text="Cache directory"]--></td>
+                <td><!--[$cachedir|pnvarprepfordisplay]-->&nbsp;(<a href="<!--[pnmodurl modname=SysInfo type=admin func=flushdbcache]-->"><!--[gt text="Flush database cache"]--></a>)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

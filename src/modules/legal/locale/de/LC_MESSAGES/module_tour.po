@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tour 1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-10-29 17:20-0400\n"
+"PO-Revision-Date: 2009-11-04 18:55+0100\n"
+"Last-Translator: Carsten Volmer <carsten@zikula.org>\n"
+"Language-Team: Carsten Volmer <carsten@zikula.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Translate Toolkit 1.5.1\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Country: GERMANY\n"
+
+#: pnuserapi.php:36
+msgid "Start"
+msgstr "Start"
+
+#: pnuserapi.php:37
+msgid "Themes"
+msgstr "Themes"
+
+#: pnuserapi.php:38
+msgid "Modules"
+msgstr "Module"
+
+#: pnuserapi.php:39
+msgid "Blocks"
+msgstr "Blöcke"
+
+#: pnuserapi.php:63
+#, php-format
+#, php-format
+msgid "Unknown module %s in Tour_userapi_getsublinks."
+msgstr "Unbekanntes Modul %s in Tour_userapi_getsublinks."
+
+#: pnuserapi.php:72
+#, php-format
+#, php-format
+msgid "Unknown theme %s in Tour_userapi_getsublinks."
+msgstr "Unbekanntes Theme %s in Tour_userapi_getsublinks."
+
+#: pnuserapi.php:93
+#, php-format
+#, php-format
+msgid "Page %s"
+msgstr "Seite %s"
+
+#: pnuser.php:97
+#, php-format
+#, php-format
+msgid "Unknown module %s in Tour_user_exttour."
+msgstr "Unbekanntes Modul %s in Tour_user_exttour."
+
+#: pnuser.php:106
+#, php-format
+#, php-format
+msgid "Unknown theme %s in Tour_user_exttour."
+msgstr "Unbekanntes Theme %s in Tour_user_exttour."
+
+#: pnuser.php:128
+msgid "Tour file does not exist!"
+msgstr "Tour-Datei existiert nicht!"
+
+#: pnversion.php:16
+msgid "Tour"
+msgstr "Tour"
+
+#. !module name that appears in URL
+#: pnversion.php:18
+msgid "tour"
+msgstr "tour"
+
+#: pnversion.php:19
+msgid "First time configuration and Zikula Tour."
+msgstr "Tour durch Zikula und Infos für den Ersteinstieg."
+
+#: pntemplates/tour_user_menu.htm:1
+msgid "Zikula Tour"
+msgstr "Tour durch Zikula"
+
+#: pntemplates/tour_user_menu.htm:4
+msgid "Tour Home"
+msgstr "Tourstart"
+
+#: pntemplates/tour_user_menu.htm:5
+msgid "First Time Tour"
+msgstr "Ersteinstieg"
+
+#: pntemplates/tour_user_menu.htm:6
+msgid "Your Distribution"
+msgstr "Diese Distribution"
+
+#: pntemplates/tour_user_menu.htm:7
+msgid "New in Zikula"
+msgstr "Neues in Zikula"
+
+#: pntemplates/tour_user_menu.htm:8
+msgid "Extension Tours"
+msgstr "Erweiterungen"

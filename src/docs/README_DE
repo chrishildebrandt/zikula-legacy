@@ -1,0 +1,130 @@
+ZIKULA INSTALLATIONSANLEITUNG
+Dieses Dokument beinhaltet wichtige Informationen über das Zikula Application
+Framework. Bitte vor dem Fortfahren die Inhalte sorgfältig durchlesen! 
+Natürlich wurde versucht hier sämtliche Informationen für eine erfolgreiche
+Installation aufzunehmen. Doch in unserem deutschen DokuWiki können Ergänzungen 
+schneller und aktueller gepflegt werden. Daher wird empfohlen, vor einer
+Installation auch die dortige Installationsanleitung zu sichten. 
+Falls eine bestehende Zikula-Version aktualisiert werden soll, dann bitte
+einen Blick in die Upgradeanleitung werfen.
+
+========
+INHALTSVERZEICHNISINHALTSVERZEICHNIS
+========
+1. Zikula: Das "Forest"-Release
+2. Serverumgebung
+3. Neuinstallation
+   a. Webbrowser-basierte Installation (empfohlen)
+   b. manueller Import des SQL-Dumps
+4. Abschlussbemerkung
+
+
+1. Das "Forest"-Release
+=============================
+
+Zikula ist ein Open Source Application Framework, das Inhalte von Design und 
+Technik trennt. Die Inhalte einer Internetpräsenz (zum Beispiel Beiträge,
+Links, Downloads, FAQs, Bildergalerien, Foren etc.) können dabei direkt im 
+Browser verwaltet werden. Durch die klare Aufgliederung in Form, Funktion,
+Inhalt und Gestaltung hilft das System, die Kosten und den Aufwand beim 
+Betrieb einer Webseite zu reduzieren.
+
+Das Framework ist modular aufgebaut. Die zentralen Funktionen
+(Benutzermanagement, Berechtigungssystem, API) werden vom sogenannten Core
+übernommen. Der Leistungsumfang kann darüberhinaus durch Zusatzmodule
+individuell angepasst und nahezu beliebig erweitert werden. 
+Unter anderem auch zu einem sehr leistungsfähigen 
+Content Management System (CMS).
+
+Das Projekt hat eine große internationale Community und bietet auch
+ausgezeichneten Support in den Foren. Die deutsche Anlaufstelle rund
+um Dokumentation und Support findet man unter zikula.de. Ein Opensource 
+Projekt lebt darüberhinaus auch von der Beteiligung - wir begrüßen Beiträge
+von jedem, unabhängig von seinen Kenntnissen - Wie man helfen kann.
+
+2. Serverumgebung
+=======================
+Im Vergleich zu anderen Web-Frameworks stellt Zikula wenige Anforderungen an
+den Webserver. Es unterstützt PHP5 und das noch weit verbreitete PHP4.
+Es benötigt keine eigene Datenbank für die Anwendung, sondern erlaubt,
+Datenbanktabellen mit Präfixen zu verwenden. Zikula benötigt mindestens:
+
+    * Webserver: Apache 2 (empfohlen) oder Apache 1.3, IIS, Lighttpd oder andere
+    * Programmiersprache: PHP = 4.4 (empfohlen: 5.x)
+    * Datenbank: MySQL, Oracle, MSSQL oder PostgreSQL
+
+Weitere Informationen zur Serverumgebung befinden sich im deutschen
+Dokumentationsprojekt unter “Installation”, sowie im englischsprachigen 
+Dokument “Softwareempfehlungen”.
+
+3. Neuinstallation
+===================
+Es gibt zwei Möglichkeiten zur Installation:
+
+    a. Die Webbrowser-basierte Installation (empfohlen)
+       -------------------------
+       Der einfachste Weg zu einer neuen Installation ist sicherlich die
+       Installationsroutine unter der Adresse “install.php”. Die exakte URL 
+       hängt von der jeweiligen Domain ab, aber wenn die Seite zum Beispiel
+       http://www.example.com ist, lautet die URL 
+       http://www.example.com/install.php. Wenn das System in ein 
+       Unterverzeichnis "zk" kopiert wurde, lautet die URL 
+       http://www.example.com/zk/install.php. Das Installations-Skript führt
+       Schritt für Schritt durch die gesamte Installation, der Vorgang dauert
+       insgesamt nur etwa 5 bis 10 Minuten.
+
+       HINWEIS: Während der Installation werden Zugangsdaten zu einer Datenbank
+       benötigt. Im so genannten Shared Hosting stellt oftmals der Provider die
+       Informationen über Datenbank-Benutzer, Datenbank-Passwort und den 
+       Datenbank-Namen zur Verfügung. In diesem Fall legt die 
+       Installationsroutine nur entsprechende Tabellen an. Bei vollem Zugriff 
+       auf den Server - und wenn der Datenbank-Benutzer über entsprechende
+       Berechtigungen verfügt - kann auch während der Installation eine 
+       Datenbank angelegt werden.
+
+        Nachdem die Installation abgeschlossen ist, kann die Webeite ganz 
+        einfach über den Webbrowser aufgerufen werden
+        (z.B. http://www.example.com).
+
+    b. Installation durch manuellen Import eines SQL-Dumps (nicht empfohlen)
+       -----------------------------------------
+       Die zweite Möglichkeit der Installation ist ein direktes Einspielen
+       eines SQL-Dumps in eine bestehende Datenbank - diese Möglichkeit ist
+       aber nicht einfach durchzuführen und sollte nur von erfahrenen Benutzer 
+       in Betracht gezogen werden.
+
+       HINWEIS: Der SQL-Dump ist aus einer MySQL 5.x Datenbank erstellt worden
+       und wird nicht mit einer MySQL Version vor 5.x oder einem anderen 
+       Datenbanktyp als MySQL funktionieren.
+
+       Nachdem der Dump in die Datenbank importiert wurde, muss die Datei
+       /config/config.php angepasst werden. Die erforderlichen Werte für den 
+       Benutzernamen und das Passwort können dabei optional Base64-codiert 
+       eingetragen werden.
+
+       $PNConfig['DBInfo']['default']['encoded'] = 1;)
+
+       Das Login nach manuellen Import des Dumps ist mit dem Benutzernamen 
+       “Admin” und dem Kennwort “Password” (beides ohne “”) möglich. 
+       Aus Sicherheitsgründen sollten nach der Installation diese Standardwerte
+       für den laufenden Betrieb angepasst werden.
+
+4. Abschlussbemerkung
+=============
+Direkte Modifizierungen (so genannte “Hacks”) am Systemcode oder der Datenbank
+werden nicht unterstützt. Für individuelle Modifizierungen kann auch kein
+Support geleistet werden. Anpassungen können darüberhinaus bei zukünftigen
+Aktualisierungen auch umfassende Probleme verursachen. Als Alternative
+empfehlen wir, sich das deutsche Entwickler Handbuch oder die
+englischsprachige Entwickler Dokumentation anzusehen, um die Modularität des
+Systems zukunftssicher auszunutzen.
+
+Für Fragen rund um die Installation, die Einrichtung und den Betrieb steht
+unter zikula.de ein Supportforum und im Deutschen Dokumentationsprojekt
+auch ein umfangreiches deutschsprachiges Handbuch zur Verfügung.
+
+Wir wünschen viel Spaß mit dieser Version!
+
+Das deutsche Zikula-Team
+zikula.de
+

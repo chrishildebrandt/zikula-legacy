@@ -1,0 +1,133 @@
+ZIKULA UPGRADEANLEITUNG
+
+Dieses Dokument beinhaltet wichtige Informationen über das Zikula Application
+Framework. Bitte vor dem Fortfahren die Inhalte sorgfältig durchlesen! Natürlich
+wurde versucht hier sämtliche Informationen für ein erfolgreiches Upgrade 
+aufzunehmen. Doch in unserem deutschen DokuWiki können Ergänzungen schneller
+und aktueller gepflegt werden. Daher wird empfohlen, vor einem Upgrade auch die
+dortigen Upgradeanleitungen zu sichten.
+
+========
+INHALTSVERZEICHNIS
+========
+1. Voraussetzungen
+2. Upgrade
+3. Wichtige Hinweise
+4. Abschlussbemerkung
+
+
+1. Voraussetzungen
+=======================
+Ein Upgrade von Zikula auf die Version 1.2.x setzt mindestens die Versionen
+1.1.0, 1.1.1 oder 1.1.2 voraus. Ist die vorhandene Installation älter, so sollte
+vorab eine Aktualisierung auf einer der genannten Versionen durchgeführt werden.
+
+Weitere Informationen zur Serverumgebung stehen in unserem deutschen Doku-Wiki
+zur Verfügung, sowie im englischen Dokument “Softwareempfehlungen”.
+
+2. Upgrade
+============
+Bitte die folgenden Schritte in der aufgeführten Reihenfolge abarbeiten und die
+jeweilige Beschreibung vorab gründlich durchlesen. Werden die Anweisungen 
+befolgt, sollten keine Probleme auftreten.
+
+  2.1 Datenbank und Dateisystem sichern
+  2.2 Vorhandene Installation vorbereiten
+  2.3 Upgrade durchführen
+  2.4 Aufräumarbeiten und zusätzliche Konfiguration
+
+  2.1 Backup your database and files
+  ---------------------------------------------
+  Das Anfertigen eines Datenbank-Backups wird vor einem Upgrade dringend
+  empfohlen. Einmal vorgenommene Aktualisierungen könnten ansonsten nicht wieder
+  rückgängig gemacht werden. Die Sicherung der Datenbank kann beispielsweise
+  über die Tools MySQLDumper, phpMyAdmin oder alternativ über einen SSH-Zugang
+  durchgeführt werden. Weitergehende Anleitungen zum Sichern der Datenbanken
+  gibt es vermehrt im Internet und in den Dokumentationen der oben genannten
+  Tools.
+
+  --->>> Die vorhandene Konfigurationsdatei config/config.php wird später <<<---
+  --->>> noch unbedingt benötigt. Bitte diese Datei nicht überschreiben   <<<---
+  --->>> oder löschen, sondern an einem sicheren Platz aufbewahren.       <<<---
+
+  2.2 Vorhandene Installation vorbereiten
+  ---------------------------------------------
+  Hinweis: Sicherlich wäre eine komplette Bereinigung aller vorhandenen
+  Core-Verzeichnisse auch ganz sinnvoll, um keine Altlasten, wie beispielsweise
+  /pnlang- Verzeichnisse mitzuschleppen. Doch dieser Schritt ist nicht
+  zwangläufig notwendig.
+
+  I.   Vorab ist eine Admin-Anmeldung im alten System erforderlich. Übrigens 
+       kann bei Bedarf der Internetauftritt auch während des Upgrades unter 
+       index.php?module=Settings&type=admin deaktiviert werden.
+       
+  II.  Das Modul 'legal' von /system/legal in das Verzeichnis /modules/legal
+       verschieben.
+       
+  III. Falls das Module 'Profile' noch unter /system/Profile vorhanden sein
+       sollte, dann bitte in das Verzeichnis /modules/Profile verschieben. 
+       Befindet sich das Modul bereits im Modulverzeichnis, so kann dieser 
+       Schritt übersprungen werden.
+       
+  IV.  Alle Dateien des Downloadpaketes auf den Server übertragen und vorhandene
+       Dateien überschreiben.
+       
+  V.   Die Datei config/config.php mit der in Schritt 2.1 gesicherten Datei 
+       überschreiben.
+
+
+  2.3 Upgrade durchführen
+  -------------------
+  Das Upgradeskript upgrade.php im Browser öffnen und die dort beschriebenen 
+  Schritte durchführen. Abgesehen vom Weiterklicken sind kaum Interaktionen
+  notwendig. Sämtliche notwendige Datenbankänderungen werden vollständig
+  automatisiert durchgeführt und abschließend wird man zum Admin-Panel 
+  weitergeleitet.
+
+  2.4 Aufräumarbeiten und zusätzliche Konfiguration
+  -----------------------------------------
+  Nach einer erfolgreichen Aktualisierung sind noch die folgenden 
+  Aufräumearbeiten notwendig:
+
+  I.   Normalerweise muss das nicht geprüft werden, da dies vom Upgradeskript
+       angepasst wird. Aber in der config.php muss 'dbcharset' auf 'utf8' 
+       stehen.
+       
+  II.  Das Installationsverzeichnis /install und die Dateien install.php und 
+       upgrade.php im Rootverzeichnis von Zikula.
+       
+  III. Falls individuell angepasste Themes genutzt werden, so sollten die
+       Headerinformationen aktualisiert werden. Und zwar müssen die Attribute
+       lang, langdirection und charset über die entsprechenden Plugins angepasst
+       werden. Das Template master.htm aus den Themes 'andreas08' und 
+       'SeaBreeze' kann hierzu als Referenz genommen werden. Die Themes
+       unterscheiden sich in den Varianten XHTML 1.0 STRICT und HTML 1.1
+       
+  V.   Weiterhin wäre es von Vorteil, wenn auch die Schreibrechte auf die Datei
+       config.php wieder zurückgesetzt werden. Zikula muss auf diese Datei nur 
+       noch lesend zugreifen.
+       
+  V.   Und falls der Internetauftritt, wie oben beschrieben, zwischenzeitlich
+       deaktiviert wurde, so kann dies nun auch wieder rückgängig gemacht werden
+
+3. Wichtiger Hinweis
+==========
+Direkte Modifizierungen (so genannte “Hacks”) am Systemcode oder der Datenbank
+werden nicht unterstützt. Für individuelle Modifizierungen kann auch kein
+Support geleistet werden. Anpassungen können darüberhinaus bei zukünftigen
+Aktualisierungen auch umfassende Probleme verursachen. Als Alternative empfehlen
+wir, sich das deutsche Entwickler Handbuch oder die englischsprachige Entwickler
+Dokumentation anzusehen, um die Modularität des Systems zukunftssicher
+auszunutzen.
+
+Für Fragen rund um die Installation, die Einrichtung und den Betrieb steht unter
+zikula.de ein Supportforum und im Deutschen Dokumentationsprojekt auch ein
+umfangreiches deutschsprachiges Handbuch zur Verfügung.
+
+4. Abschlussbemerkung
+=============
+Herzlichen Glückwunsch, das Upgrade ist nun vollständig durchgeführt. 
+Wir wünschen viel Spaß mit der neuen Zikula-Version.
+
+Das deutsche Zikula-Team
+zikula.de
